@@ -1,5 +1,7 @@
 local has = mobs_balrog.has
 local settings = mobs_balrog.settings
+--[[
+Disabling spawning for now
 
 mobs:spawn({
 	name = "mobs_balrog:balrog",
@@ -38,3 +40,4 @@ if has.nether and settings.spawn_in_nether then
 		max_height = nether.DEPTH_CEILING,
 	})
 end
+]]
