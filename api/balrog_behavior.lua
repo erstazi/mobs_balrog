@@ -80,7 +80,8 @@ function api.destroy_obstructions(self, dtime)
 				vector.multiply(vector.direction(cur_pos, target_pos), 2)
 			)
 
-			explode(self.object, boom_pos)
+			-- TNT explosions disabled
+			-- explode(self.object, boom_pos)
 		end
 
 		self.last_obstruct_pos = cur_pos
