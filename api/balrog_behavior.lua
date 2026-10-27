@@ -8,12 +8,12 @@ local explode_damage_radius = settings.explode_damage_radius
 local function explode(obj, pos)
 	local before = minetest.get_us_time()
 
-	tnt.boom(pos, {
-		name = "Balrog's Blast",
-		radius = explode_radius,
-		damage_radius = explode_damage_radius,
-		tiles = { "mobs_balrog_flame.png" },
-	})
+	-- tnt.boom(pos, {
+		-- name = "Balrog's Blast",
+		-- radius = explode_radius,
+		-- damage_radius = explode_damage_radius,
+		-- tiles = { "mobs_balrog_flame.png" },
+	-- })
 
 	mobs_balrog.log(
 		"action",
