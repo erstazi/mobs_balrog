@@ -1,6 +1,32 @@
 local api = mobs_balrog.api
 local settings = mobs_balrog.settings
 
+local drops = {
+  {
+    name = "mobs_balrog:balrog_whip",
+    chance = settings.whip_drop_chance,
+    min = 1,
+    max = 1,
+  },
+}
+
+if core.registered_items["jc_special:geode_helmet"] then
+  for _, item in ipairs({
+    "jc_special:geode_helmet",
+    "jc_special:geode_chestplate",
+    "jc_special:geode_leggings",
+    "jc_special:geode_boots",
+    "jc_special:geode_shield",
+  }) do
+    drops[#drops + 1] = {
+      name = item,
+      chance = 20,
+      min = 0,
+      max = 1,
+    }
+  end
+end
+
 mobs:register_mob("mobs_balrog:balrog", {
 	nametag = "",
 	type = "monster",
@@ -48,14 +74,7 @@ mobs:register_mob("mobs_balrog:balrog", {
 		death = "mobs_balrog_death",
 		attack = "mobs_balrog_attack",
 	},
-	drops = {
-		{
-			name = "mobs_balrog:balrog_whip",
-			chance = settings.whip_drop_chance,
-			min = 1,
-			max = 1,
-		},
-	},
+	drops = drops,
 	visual = "mesh",
 	visual_size = { x = 2, y = 2 },
 	collisionbox = { -0.8, -2.0, -0.8, 0.8, 2.5, 0.8 },
@@ -89,6 +108,23 @@ mobs:register_mob("mobs_balrog:balrog", {
 		api.heal(self, dtime)
 	end,
 })
+
+
+if core.registered_items["jc_special:geode_helmet"] then
+  for _, item in ipairs({
+    "jc_special:geode_helmet",
+    "jc_special:geode_chestplate",
+    "jc_special:geode_leggings",
+    "jc_special:geode_boots",
+  }) do
+    drops[#drops + 1] = {
+      name = item,
+      chance = 20,
+      min = 0,
+      max = 1,
+    }
+  end
+end
 
 mobs:register_egg(
 	"mobs_balrog:balrog",

@@ -41,5 +41,5 @@ minetest.register_node("mobs_balrog:flame", {
 })
 
 if mobs_balrog.has["3d_armor"] then
-	armor.fire_nodes["mobs_balrog:flame"] = 4
+	armor.fire_nodes[#armor.fire_nodes + 1] = { "mobs_balrog:flame", 4 }
 end
