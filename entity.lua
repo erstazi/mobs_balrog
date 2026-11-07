@@ -21,7 +21,7 @@ if core.registered_items["jc_special:geode_helmet"] then
     drops[#drops + 1] = {
       name = item,
       chance = 20,
-      min = 0,
+      min = 1,
       max = 1,
     }
   end
@@ -108,24 +108,6 @@ mobs:register_mob("mobs_balrog:balrog", {
 		api.heal(self, dtime)
 	end,
 })
-
-
-if core.registered_items["jc_special:geode_helmet"] then
-  for _, item in ipairs({
-    "jc_special:geode_helmet",
-    "jc_special:geode_chestplate",
-    "jc_special:geode_leggings",
-    "jc_special:geode_boots",
-    "jc_special:geode_shield",
-  }) do
-    drops[#drops + 1] = {
-      name = item,
-      chance = 20,
-      min = 0,
-      max = 1,
-    }
-  end
-end
 
 mobs:register_egg(
 	"mobs_balrog:balrog",
