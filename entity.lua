@@ -116,6 +116,7 @@ if core.registered_items["jc_special:geode_helmet"] then
     "jc_special:geode_chestplate",
     "jc_special:geode_leggings",
     "jc_special:geode_boots",
+    "jc_special:geode_shield",
   }) do
     drops[#drops + 1] = {
       name = item,
