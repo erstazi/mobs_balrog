@@ -68,7 +68,7 @@ mobs:register_mob("mobs_balrog:balrog", {
 	pathfinding = settings.pathfinding,
 	makes_footstep_sound = true,
 	sounds = {
-		distance = settings.view_range * 8,
+		distance = settings.view_range * 3,
 		random = "mobs_balrog_random",
 		war_cry = "mobs_balrog_war_cry",
 		death = "mobs_balrog_death",
